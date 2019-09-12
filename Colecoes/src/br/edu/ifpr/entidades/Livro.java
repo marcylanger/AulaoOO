@@ -1,9 +1,13 @@
 package br.edu.ifpr.entidades;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Livro implements Comparable<Livro> {
 
 	private String isbn;
 	private String titulo;
+	private Set<Exemplar> exemplares = new HashSet<Exemplar>();
 	
 	public String getIsbn() {
 		return isbn;
@@ -19,6 +23,13 @@ public class Livro implements Comparable<Livro> {
 	}
 	
 	
+	
+	public Set<Exemplar> getExemplares() {
+		return exemplares;
+	}
+	public void setExemplares(Set<Exemplar> exemplares) {
+		this.exemplares = exemplares;
+	}
 	@Override
 	public String toString() {
 		return "Livro [isbn=" + isbn + ", titulo=" + titulo + "]";
